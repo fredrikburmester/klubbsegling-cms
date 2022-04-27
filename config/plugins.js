@@ -1,5 +1,4 @@
-module.exports = ({ env }) = {
-  //
+module.exports = ({ env }) => ({
   'users-permissions': {
     config: {
       jwtSecret: env('JWT_SECRET')
@@ -15,7 +14,6 @@ module.exports = ({ env }) = {
           user: 'fredrik.burmester@gmail.com',
           pass: 'hhhrqoboineqiwmd',
         },
-        // ... any custom nodemailer options
       },
       settings: {
         defaultFrom: 'info@klubbsegling.se',
@@ -23,4 +21,4 @@ module.exports = ({ env }) = {
       },
     },
   },
-};
+});
