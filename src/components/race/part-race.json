@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_race_part_races",
+  "info": {
+    "displayName": "PartRace",
+    "icon": "flag-checkered",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "firstStart": {
+      "type": "datetime"
+    },
+    "lowestSRS": {
+      "type": "decimal"
+    },
+    "srsInterval": {
+      "type": "decimal"
+    },
+    "groupSize": {
+      "type": "integer"
+    },
+    "groupIntervalMinutes": {
+      "type": "integer"
+    },
+    "groups": {
+      "type": "component",
+      "repeatable": true,
+      "component": "group.group"
+    },
+    "marks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "marks.mark"
+    }
+  }
+}

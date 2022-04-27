@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reports",
+  "info": {
+    "singularName": "report",
+    "pluralName": "reports",
+    "displayName": "Report",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "boat": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::boat.boat",
+      "inversedBy": "reports"
+    },
+    "start": {
+      "type": "datetime"
+    },
+    "finish": {
+      "type": "datetime"
+    },
+    "boatInFront": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::boat.boat"
+    },
+    "boatBehind": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::boat.boat"
+    },
+    "markReports": {
+      "type": "component",
+      "repeatable": true,
+      "component": "report.mark-report"
+    }
+  }
+}

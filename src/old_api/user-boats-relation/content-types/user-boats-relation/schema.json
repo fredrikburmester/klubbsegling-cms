@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_boats_relations",
+  "info": {
+    "singularName": "user-boats-relation",
+    "pluralName": "user-boats-relations",
+    "displayName": "UserBoatsRelation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "relationToBoat": {
+      "type": "enumeration",
+      "enum": [
+        "owner",
+        "sailor",
+        "observer"
+      ],
+      "required": true
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "userBoatsRelations"
+    },
+    "boat": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::boat.boat",
+      "inversedBy": "userBoatsRelations"
+    }
+  }
+}

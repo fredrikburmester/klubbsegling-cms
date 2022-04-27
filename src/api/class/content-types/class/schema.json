@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "classes",
+  "info": {
+    "singularName": "class",
+    "pluralName": "classes",
+    "displayName": "Class"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "boats": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::boat.boat",
+      "mappedBy": "classes"
+    }
+  }
+}

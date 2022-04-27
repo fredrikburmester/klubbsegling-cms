@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_race_reports",
+  "info": {
+    "displayName": "Report",
+    "icon": "address-book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "boat": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::boat.boat"
+    },
+    "finish": {
+      "type": "datetime"
+    },
+    "start": {
+      "type": "datetime"
+    },
+    "boatInFront": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::boat.boat"
+    },
+    "boatBehind": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::boat.boat"
+    },
+    "marks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "marks.mark"
+    }
+  }
+}

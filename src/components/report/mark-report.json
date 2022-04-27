@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_marks_mark_reports",
+  "info": {
+    "displayName": "MarkReport",
+    "icon": "align-left",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "mark": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::mark.mark"
+    },
+    "time": {
+      "type": "datetime"
+    },
+    "rounded": {
+      "type": "boolean"
+    },
+    "boatInFront": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::boat.boat"
+    },
+    "boatBehind": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::boat.boat"
+    }
+  }
+}

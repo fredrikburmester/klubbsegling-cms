@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "boats",
+  "info": {
+    "singularName": "boat",
+    "pluralName": "boats",
+    "displayName": "Boat",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "ref": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "registrations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::registration.registration",
+      "mappedBy": "boat"
+    },
+    "userBoatsRelations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::user-boats-relation.user-boats-relation",
+      "mappedBy": "boat"
+    },
+    "Hcp_FC_DWS": {
+      "type": "float"
+    },
+    "Hcp_FC_NoDWS": {
+      "type": "float"
+    },
+    "Hcp_SH_DWS": {
+      "type": "float"
+    },
+    "Hcp_SH_NoDWS": {
+      "type": "float"
+    },
+    "classes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::class.class",
+      "inversedBy": "boats"
+    },
+    "partRaces": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::part-race.part-race",
+      "mappedBy": "boats"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "registrations",
+  "info": {
+    "singularName": "registration",
+    "pluralName": "registrations",
+    "displayName": "Registration",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "boat": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::boat.boat",
+      "inversedBy": "registrations"
+    },
+    "crew": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "registrations"
+    },
+    "race": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::race.race",
+      "inversedBy": "registrations"
+    },
+    "handicapSystem": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::handicap-system.handicap-system"
+    }
+  }
+}

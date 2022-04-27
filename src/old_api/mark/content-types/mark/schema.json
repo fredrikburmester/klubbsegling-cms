@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "marks",
+  "info": {
+    "singularName": "mark",
+    "pluralName": "marks",
+    "displayName": "Mark",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "coordinates": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

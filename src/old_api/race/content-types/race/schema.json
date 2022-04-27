@@ -1,0 +1,109 @@
+{
+  "kind": "collectionType",
+  "collectionName": "races",
+  "info": {
+    "singularName": "race",
+    "pluralName": "races",
+    "displayName": "Race",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "start": {
+      "type": "date"
+    },
+    "end": {
+      "type": "date"
+    },
+    "contactPerson": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "registrations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::registration.registration",
+      "mappedBy": "race"
+    },
+    "boatInFront": {
+      "type": "boolean"
+    },
+    "boatBehind": {
+      "type": "boolean"
+    },
+    "requireRegistration": {
+      "type": "boolean"
+    },
+    "SRS_ToT": {
+      "type": "boolean"
+    },
+    "SRS_ToD": {
+      "type": "boolean"
+    },
+    "SRS_ToVD": {
+      "type": "boolean"
+    },
+    "SRS_ToVDT": {
+      "type": "boolean"
+    },
+    "classes": {
+      "type": "boolean"
+    },
+    "registrationOpen": {
+      "type": "date"
+    },
+    "registrationClose": {
+      "type": "date"
+    },
+    "hcp": {
+      "type": "enumeration",
+      "enum": [
+        "SRS",
+        "PHRF",
+        "Portsmouth",
+        "IRC",
+        "Bankapp"
+      ]
+    },
+    "resultSystem": {
+      "type": "enumeration",
+      "enum": [
+        "LowPoint",
+        "BonusPoint",
+        "Abc"
+      ]
+    },
+    "serie": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::serie.serie",
+      "inversedBy": "races"
+    },
+    "club": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::club.club",
+      "inversedBy": "races"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_race_marks",
+  "info": {
+    "displayName": "Mark",
+    "icon": "location-arrow",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "mark": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::mark.mark"
+    },
+    "isStart": {
+      "type": "boolean"
+    },
+    "isFinish": {
+      "type": "boolean"
+    },
+    "leaveOn": {
+      "type": "enumeration",
+      "enum": [
+        "starboard",
+        "port"
+      ]
+    },
+    "reportTime": {
+      "type": "boolean"
+    }
+  }
+}

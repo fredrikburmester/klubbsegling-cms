@@ -1,0 +1,89 @@
+{
+  "kind": "collectionType",
+  "collectionName": "boats",
+  "info": {
+    "singularName": "boat",
+    "pluralName": "boats",
+    "displayName": "Boat",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "boatName": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "registrations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::registration.registration",
+      "mappedBy": "boat"
+    },
+    "hcp_FC_DWS": {
+      "type": "float"
+    },
+    "hcp_FC_NoDWS": {
+      "type": "float"
+    },
+    "hcp_SH_DWS": {
+      "type": "float"
+    },
+    "hcp_SH_NoDWS": {
+      "type": "float"
+    },
+    "classes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::class.class",
+      "inversedBy": "boats"
+    },
+    "owners": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "boats"
+    },
+    "reports": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::report.report",
+      "mappedBy": "boat"
+    },
+    "referenceNumber": {
+      "type": "string"
+    },
+    "boatType": {
+      "type": "string"
+    },
+    "srsID": {
+      "type": "string"
+    },
+    "boatClass": {
+      "type": "string"
+    },
+    "nationality": {
+      "type": "string"
+    },
+    "sailNumber": {
+      "type": "string"
+    },
+    "verifiedSRS": {
+      "type": "boolean"
+    }
+  }
+}
